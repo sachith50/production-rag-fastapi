@@ -15,6 +15,7 @@ A production-ready Retrieval-Augmented Generation (RAG) system built with FastAP
 ---
 
 ## 🗄️ System Architecture
+
 [ PDF / DOCX Ingestion ] ──> [ Recursive Chunking ] ──> [ Vector Embeddings ]│▼[ User Query ] ──> [ Hybrid Search: BM25 + pgvector ] ──> [ Cross-Encoder Re-rank ]│▼[ LLM Generation with Citations ] <── [ Ranked Context Chunks ]
 ---
 
@@ -34,13 +35,3 @@ Configure environment variables in .env:Code snippetDATABASE_URL=postgresql://us
 OPENAI_API_KEY=your_api_key_here
 ExecutionRun the FastAPI server:Bashpoetry run uvicorn app.main:app --reload
 🧪 Evaluation ResultsRetrieval StrategyTop-5 Hit RateTop-10 Hit RateNaive Vector Search61.2%72.4%Hybrid BM25 + pgvector + Re-ranking89.1%94.8%
----
-
-### **Push the README Update to GitHub**
-
-Run these final commands in your PowerShell terminal:
-
-```powershell
-git add README.md
-git commit -m "docs: add system architecture, Poetry setup instructions, and evaluation metrics"
-git push origin main
